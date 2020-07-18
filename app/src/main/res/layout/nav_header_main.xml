@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height">
+
+    <ImageView
+        android:id="@+id/imgProfileShadowView"
+        android:layout_width="220dp"
+        android:layout_height="match_parent"
+        android:alpha="0.3"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_my_account" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparentBlack"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/cvProfilePicture"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:src="@drawable/ic_my_account"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="3dp" />
+
+            <TextView
+                android:id="@+id/tvNavProfileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+                android:text="Nasir Uddin"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnLoginDrawer"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginRight="@dimen/pad_margin_5dp"
+            android:layout_marginBottom="@dimen/pad_margin_5dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/facebook_rounded"
+            android:text="@string/login"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

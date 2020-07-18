@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary21</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="DetailsActivityTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/detailsToolbar</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <!--Difference 21-->
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <!--Difference-->
+
+    <!-- facebook account kit theme -->
+
+    <style name="FbAccountKitTheme" parent="Theme.AccountKit">
+
+        <item name="com_accountkit_primary_color">@color/accKitPrimaryDark</item>
+        <item name="com_accountkit_primary_text_color">@color/title_color</item>
+        <item name="com_accountkit_secondary_text_color">@color/title_color_deep</item>
+        <item name="com_accountkit_status_bar_color">@color/accKitPrimary</item>
+        <item name="com_accountkit_input_accent_color">@color/title_color</item>
+        <item name="com_accountkit_input_border_color">@color/title_color_deep</item>
+        <item name="com_accountkit_secondary_color">@color/white</item>
+        <item name="com_accountkit_background">@drawable/ic_splash</item>
+        <item name="com_accountkit_background_color">@android:color/transparent</item>
+        <item name="com_accountkit_input_text_color">@color/title_color_deep</item>
+
+    </style>
+
+
+</resources>

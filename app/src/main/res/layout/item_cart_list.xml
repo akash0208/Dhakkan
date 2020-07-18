@@ -1,0 +1,114 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/page_bg_dim"
+        android:orientation="vertical"
+        android:paddingTop="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp">
+
+            <CheckBox
+                android:id="@+id/chkCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:checked="false"
+                android:gravity="center_vertical" />
+
+            <ImageView
+                android:id="@+id/ivProductImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:layout_toRightOf="@+id/chkCart"
+                android:scaleType="centerCrop"
+                android:src="@color/imgPlaceholder" />
+
+            <LinearLayout
+                android:id="@+id/lytProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivProductImage"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/pad_margin_5dp"
+                android:paddingTop="@dimen/pad_margin_10dp"
+                android:weightSum="1">
+
+                <com.shopby.dhakkan.view.MontserratTextView
+                    android:id="@+id/tvProductName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".9"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Xiaomi power bank "
+                    android:textColor="@color/product_name_color"
+                    android:textSize="14sp" />
+
+                <ImageButton
+                    android:id="@+id/remove"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight=".1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="2dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_delete" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bottomPanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lytProductName"
+                android:layout_toRightOf="@+id/ivProductImage"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="10dp"
+                android:weightSum="1.0">
+
+                <com.shopby.dhakkan.view.RobotoTextView
+                    android:id="@+id/tvCount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textColor="@color/rating_text"
+                    android:textStyle="bold" />
+
+                <com.shopby.dhakkan.view.RobotoTextView
+                    android:id="@+id/tvProductPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".5"
+                    android:gravity="right"
+                    android:text="80"
+                    android:textColor="@color/product_name_color"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:background="@color/toolbar_boarder" />
+
+    </LinearLayout>
+
+</LinearLayout>

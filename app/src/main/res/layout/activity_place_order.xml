@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg">
+
+    <include
+        android:id="@+id/toolbarPlaceOrder"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footerView"
+        android:layout_below="@+id/toolbarPlaceOrder"
+        android:layout_margin="@dimen/pad_margin_10dp">
+
+        <LinearLayout
+            android:id="@+id/lytShippingMethod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/pad_margin_15dp"
+            android:visibility="gone">
+
+            <com.shopby.dhakkan.view.RobotoTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/shipping_method"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_16sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/pad_margin_15dp">
+
+                <RadioButton
+                    android:id="@+id/rdOffice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/office_delivery" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/pad_margin_30dp"
+                    android:text="Warehouse address" />
+
+                <RadioButton
+                    android:id="@+id/rdHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_delivery" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <!--payment method-->
+        <LinearLayout
+            android:id="@+id/lytPaymentMethod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lytShippingMethod"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/pad_margin_15dp">
+
+            <com.shopby.dhakkan.view.RobotoTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/select_payment_method"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_16sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rgPaymentMethod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/pad_margin_15dp">
+
+                <!--<RadioButton-->
+                    <!--android:id="@+id/rdBank"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@string/title_bank" />-->
+
+                <!--<RadioButton-->
+                    <!--android:id="@+id/rdCheck"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@string/title_check" />-->
+
+                <RadioButton
+                    android:id="@+id/rdCashOnDelivery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:enabled="false"
+                    android:text="@string/title_cash_on_delivery" />
+
+                <RadioButton
+                    android:id="@+id/rdStripe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/title_payment" />
+
+                <!--<RadioButton
+                    android:id="@+id/rdPayPal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/paypal" />-->
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/transactionID"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/pad_margin_5dp"
+                android:background="@drawable/edt_back_border"
+                android:hint="@string/transaction_id"
+                android:paddingLeft="@dimen/pad_margin_10dp"
+                android:paddingRight="@dimen/pad_margin_10dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/footerView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_width_50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="1.0">
+
+        <com.shopby.dhakkan.view.RobotoTextView
+            android:id="@+id/tvTotalPrice"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".65"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="Total: 0.0"
+            android:textColor="@color/title_color_deep"
+            android:textSize="@dimen/txt_size_18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnPlaceOrder"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/pad_margin_10dp"
+            android:layout_weight=".35"
+            android:background="@drawable/btn_main"
+            android:gravity="center"
+            android:text="@string/place_order"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</RelativeLayout>
